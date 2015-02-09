@@ -1,0 +1,8 @@
+Package: cigeneR
+Title: Different useful R functions for bioinformaticians
+Version: 0.1
+Authors@R: "Tim Knutsen <timknutsen@gmail.com> [aut, cre]"
+Description: Small functions making life easier for bioinformaticians
+Depends: R (>= 3.1.0)
+License: MIT
+LazyData: true
