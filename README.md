@@ -4,6 +4,6 @@ Different useful R functions for bioinformaticians.
 
 ## Installation
 ```
-devtools::install_github(timknut/cigeneR)
+devtools::install_github("timknut/cigeneR")
 ```
 
