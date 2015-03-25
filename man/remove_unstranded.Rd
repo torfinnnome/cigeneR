@@ -2,7 +2,7 @@
 % Please edit documentation in R/gtf_tools.R
 \name{remove_unstranded}
 \alias{remove_unstranded}
-\title{Removes unstranded from gtf}
+\title{Removes unstranded from gtf read into R.}
 \usage{
 remove_unstranded(x)
 }
@@ -10,10 +10,10 @@ remove_unstranded(x)
 \item{x}{GTF object.}
 }
 \description{
-Does what is says.
+Assumes stranded info is in column 7.
 }
 \examples{
-gtf_reader()
+remove_unstranded(mtcars)
 }
 \keyword{GTF}
 

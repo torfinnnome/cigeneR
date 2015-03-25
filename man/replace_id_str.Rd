@@ -2,20 +2,20 @@
 % Please edit documentation in R/gtf_tools.R
 \name{replace_id_str}
 \alias{replace_id_str}
-\title{Update id in plink ped}
+\title{Update id in vector of IDs, eg. plink fam.}
 \usage{
 replace_id_str(x, list)
 }
 \arguments{
-\item{x}{Character vector of lines from ped}
+\item{x}{Character vector of IDs to update.}
 
-\item{List}{two column text file with pattern and replacement}
+\item{List}{two column dataframe with pattern and replacement}
 }
 \description{
-Update Ids in plink ped file based on two column data frame
+Update Ids in dataframe column based on two column data frame
 }
 \examples{
-replace_id_str()
+replace_id_str(x)
 }
 \keyword{plink}
 
