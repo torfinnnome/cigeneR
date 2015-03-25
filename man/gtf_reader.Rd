@@ -12,8 +12,5 @@ gtf_reader(filename)
 \description{
 Does what is says.
 }
-\examples{
-gtf_reader()
-}
 \keyword{GTF}
 

@@ -14,8 +14,5 @@ gtf_writer(x, filename)
 \description{
 Does what is says.
 }
-\examples{
-gtf_writer()
-}
 \keyword{GTF}
 

@@ -15,7 +15,7 @@ replace_id_str(x, list)
 Update Ids in dataframe column based on two column data frame
 }
 \examples{
-replace_id_str(x)
+delete <- apply(HDanimals, 2, replace_id_str, list = id_changes_complete)
 }
 \keyword{plink}
 

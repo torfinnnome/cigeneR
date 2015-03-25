@@ -41,15 +41,17 @@ remove_unstranded <- function(x) {
 #' @param List two column dataframe with pattern and replacement
 #' @keywords plink
 #' @export
-#' @examples
-#'
-#' replace_id_str(x)
+#' @examples delete <- apply(HDanimals, 2, replace_id_str, list = id_changes_complete)
 
 replace_id_str <- function(x, list){
 	assertthat::assert_that(ncol(list) == 2)
-	names(list) <- c("V1", "V2")
+	colnames(list) <- c("V1", "V2")
 	pattern = paste("\\b", list$V1, "\\b", sep = "") # only 1606 and not eg. 01606 is replaced.
+	hits <- ldply(pattern, function(str) {
+		data.frame(col1 = x[grepl(str, x)])
+	})
+	message(paste("replaced", nrow(hits), "of", nrow(list), "matching patterns"))
 	replacement = list$V2
-		stringi::stri_replace_all(
+	stringi::stri_replace_all(
 		str = x, replacement = replacement, regex = pattern, vectorize_all = F)
 }
